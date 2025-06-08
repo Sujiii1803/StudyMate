@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="theme-toggle">
+    <label>
+      <input type="checkbox" id="themeSwitch"> 🌙 Dark Mode
+    </label>
+  </div>
+
+  <div class="container">
+    <h1>🎨 Interactive Quiz Creator</h1>
+
+    <div id="create-section">
+      <textarea id="question" placeholder="Type your question here..."></textarea>
+      <textarea id="answer" placeholder="Type the answer here..."></textarea>
+      <button onclick="saveQuestion()">✅ Save Question</button>
+      <button onclick="startQuiz()">🚀 Start Assessment</button>
+    </div>
+
+    <div id="quiz-section" style="display:none;">
+      <h2 id="quiz-question"></h2>
+      <input type="text" id="userAnswer" placeholder="Type your answer..." />
+      <button onclick="submitAnswer()">Submit</button>
+      <p id="timer">⏳ Time left: 10s</p>
+    </div>
+
+    <div id="result-section" style="display:none;"></div>
+  </div>
+
+  <audio id="correctSound" src="https://www.soundjay.com/buttons/sounds/button-3.mp3"></audio>
+  <audio id="wrongSound" src="https://www.soundjay.com/buttons/sounds/button-10.mp3"></audio>
+  <audio id="endSound" src="https://www.soundjay.com/misc/sounds/bell-ringing-01.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
